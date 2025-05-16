@@ -27,6 +27,10 @@ html, body {
 	background-color: transparent;
 }
 
+#last_element_information {
+	margin-right: 40px;
+}
+
 .container_v {
 	display: flex;
 	flex-direction: column;
@@ -86,4 +90,34 @@ html, body {
 
 .information_button:hover {
 	color: var(--fg);
+}
+
+.collapsed_menu {
+	display: none;
+	color: var(--color-6);
+	transform: scale(1.5, 1.5);
+	border: none;
+	background-color: transparent;
+	padding: 3px;
+	margin: 6px;
+	border-radius: var(--global-radius);
+	transition: background-color var(--anim-speed) ease,
+				color var(--anim-speed) ease;
+}
+
+.collapsed_menu:hover {
+	color: var(--bg);
+	background-color: var(--color-6);
+}
+
+@media (max-width: 768px)
+{
+	.information_button {
+		display: none;
+	}
+
+	.collapsed_menu {
+		display: block;
+		cursor: pointer;
+	}
 }
