@@ -1,0 +1,73 @@
+:root {
+	--bg: #1E1E1E;
+	--color-0: #212121;
+	--color-1: #242424;
+	--color-2: #262626;
+	--color-3: #2a2a2a;
+	--color-4: #363636;
+	--color-5: #3f3f3f;
+	--color-6: #555555;
+	--color-7: #666666;
+	--color-8: #999999;
+	--color-9: #bababa;
+	--fg: #dadada;
+	--accent: #7050E6;
+	--anim-speed: 0.2s;
+}
+
+html, body {
+	height: 100%;
+	background-color: var(--color-0);
+	color: var(--fg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	/* border: 8px solid black; */
+	border: none;
+	gap: 2px;
+}
+
+.box {
+	background-color: var(--color-5);
+	color: var(--fg);
+	border-radius: 5px;
+	padding: 5px;
+	height: 80%;
+}
+
+.box:nth-child(1) {
+	border-radius: 5px 0px 0px 5px;
+	width: 175px;
+}
+
+.box:last-child {
+	border-radius: 0px 5px 5px 0px;
+	width: 1000px;
+}
+
+.section_container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+	height: 50vh;
+}
+
+.button_class {
+	background-color: transparent;
+	color: var(--color-7);
+	border-radius: 3px;
+	border: none;
+	margin: 5px 0px 5px 0px;
+	padding: 4px 11vh 4px 5px;
+	transition: background-color var(--anim-speed) linear,
+				color var(--anim-speed) linear,
+				padding var(--anim-speed) linear;
+}
+
+.button_class:hover {
+	background-color: var(--accent);
+	color: var(--fg);
+	padding: 4px 5px 4px 11vh;
+}
