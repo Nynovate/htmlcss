@@ -13,61 +13,77 @@
 	--fg: #dadada;
 	--accent: #7050E6;
 	--anim-speed: 0.2s;
+	--global-radius: 5px;
 }
 
 html, body {
-	height: 100%;
-	background-color: var(--color-0);
+	background-color: var(--bg);
 	color: var(--fg);
+}
+
+.container_h {
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-	/* border: 8px solid black; */
-	border: none;
-	gap: 2px;
+	justify-content: var(--position, center);
+	background-color: transparent;
+}
+
+.container_v {
+	display: flex;
+	flex-direction: column;
+	align-items: var(--position, center);
+	background-color: transparent;
 }
 
 .box {
-	background-color: var(--color-5);
-	color: var(--fg);
-	border-radius: 5px;
-	padding: 5px;
-	height: 80%;
+	background-color: var(--color-6);
+	margin: 4px;
+	padding: 4px;
+	border-radius: var(--global-radius);
 }
 
-.box:nth-child(1) {
-	border-radius: 5px 0px 0px 5px;
-	width: 175px;
+.menu_background {
+	background-color: var(--color-6);
+	border-radius: var(--global-radius);
+	margin: 1px;
 }
 
-.box:last-child {
-	border-radius: 0px 5px 5px 0px;
-	width: 1000px;
+#section_part {
+	border-radius: var(--global-radius) 0px 0px var(--global-radius);
 }
 
-.section_container {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: flex-end;
-	height: 50vh;
+#content_part {
+	border-radius: 0px var(--global-radius) var(--global-radius) 0px;
 }
 
-.button_class {
-	background-color: transparent;
-	color: var(--color-7);
-	border-radius: 3px;
+.information_button {
 	border: none;
-	margin: 5px 0px 5px 0px;
-	padding: 4px 11vh 4px 5px;
-	transition: background-color var(--anim-speed) linear,
-				color var(--anim-speed) linear,
-				padding var(--anim-speed) linear;
+	position: relative;
+	background-color: transparent;
+	border-radius: var(--global-radius);
+	color: var(--color-5);
+	padding: 3px;
+	margin: 6px;
+	transition: color var(--anim-speed) linear,
+				border-bottom var(--anim-speed) linear;
 }
 
-.button_class:hover {
-	background-color: var(--accent);
+.information_button::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1px;
+	background-color: var(--fg);
+	transform: scaleX(0);
+	transform-origin: bottom center;
+	transition: transform var(--anim-speed) ease;
+}
+
+.information_button:hover::after {
+	transform: scaleX(1);
+}
+
+.information_button:hover {
 	color: var(--fg);
-	padding: 4px 5px 4px 11vh;
 }
