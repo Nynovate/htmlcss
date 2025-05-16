@@ -17,12 +17,26 @@
 }
 
 * {
-	font-size: 17px;
+	font-size: 14px;
 }
 
-html, body {
+html{
 	background-color: var(--bg);
 	color: var(--fg);
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	box-shadow: inset -1300px 0px 300px 0px var(--bg);
+	background-image: url('../img.png');
+	background-size: cover;
+	background-repeat: repeat;
+	background-position: center;
 }
 
 .container_h {
@@ -70,7 +84,7 @@ html, body {
 	border-radius: var(--global-radius);
 	color: var(--color-5);
 	padding: 3px;
-	margin: 6px;
+	margin: 15px 6px 6px 6px;
 	transition: color var(--anim-speed) linear,
 				border-bottom var(--anim-speed) linear;
 }
