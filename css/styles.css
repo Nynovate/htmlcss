@@ -16,6 +16,10 @@
 	--global-radius: 5px;
 }
 
+* {
+	font-size: 17px;
+}
+
 html, body {
 	background-color: var(--bg);
 	color: var(--fg);
@@ -28,7 +32,7 @@ html, body {
 }
 
 #last_element_information {
-	margin-right: 40px;
+	margin-right: 20px;
 }
 
 .container_v {
@@ -108,6 +112,10 @@ html, body {
 .collapsed_menu:hover {
 	color: var(--bg);
 	background-color: var(--color-6);
+}
+
+.info_me {
+	margin: 10px;
 }
 
 @media (max-width: 768px)
