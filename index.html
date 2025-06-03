@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Curriculum Vitae</title>
+		<link rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+		<script src="https://unpkg.com/fullpage.js/dist/fullpage.min.js"></script>
+	</head>
+	<body>
+		<div class="masked-stripes"></div>
+		<div id="fullpage">
+			<div class="circle" style="--radius: 100px; bottom: 75px; right: 85px;"></div>
+			<div class="circle" style="--radius: 35px; bottom: 75px; right: 280px; animation-direction: reverse;"></div>
+			<div class="circle" style="--radius: 10px; bottom: 250px; right: 250px;"></div>
+			<div class="rectangle" style="border: 2px solid var(--color-4); background-color: transparent; top: 10%; left: 7%; --size: 25px; --angle: 86deg;"></div>
+			<div class="rectangle" style="border: 2px solid var(--color-4); background-color: transparent; top: 10%; left: 10%; --size: 60px; --angle: 45deg;"></div>
+			<div class="rectangle inverse" style="border: 2px solid var(--color-4); background-color: transparent; top: 20%; left: 5%; --size: 80px; --angle: 15deg;"></div>
+			<div class="section">
+				<!-- About -->
+				<div class="vertical_container" style="align-items: center; margin: 0px; width: 100%;">
+					<div class="horizontal_container" style="width: 100%;">
+						<div class="vertical_container" style="align-items: flex-end; justify-content: center;">
+							<h1 style="font-size: 42px; color: transparent; -webkit-text-stroke: 1px var(--fg); margin: 0px; padding: 0px;">ABOUT</h1>
+							<div class="container" style="opacity: 0.5; width: 200px; height: 1px; background-color: var(--fg);"></div>
+							<h2 style="font-size: 42px; color: transparent; -webkit-text-stroke: 1px var(--fg); margin: 0px; padding: 0px;">RAKOTOARIVONY</h2>
+							<h4 style="font-size: 27px; margin: 0px; padding: 0px;">Razanajohary Ny Hasina</h4>
+						</div>
+						<div class="container" style="opacity: 0.5; width: 1px; height: 32vh; background-color: var(--fg);">
+						</div>
+						<div class="container" style="width: 60%;">
+							<b><p style="font-size: 42px; padding: 0px; margin: 0px;">Programmer, Artist.</p></b>
+							<b><p style="font-size: 27px; margin: 0px 0px 20px 0px; padding: 0px;">Always up to learn new things.</p></b>
+							<p style="margin: 0px; padding: 0px;">Hi, I’m Ny Hasina. I’m a systems-level programmer, game developer, and an artist in my spare time.</p><br>
+							<p style="margin: 0px; padding: 0px;">My programming skill focus solely on C and C++, and I’m deeply interested in how things work under the hood.<br>I love learning new things and creating new systems, it’s what I enjoy doing every day. My curiosity has pushed me to tackle many problems,<br>and in doing so, it shaped and strengthened my problem-solving skills.</p><br>
+							<p style="margin: 0px; padding: 0px;">Sometimes, I take a step back and spend time drawing, exploring new ideas in Godot or Blender,<br>and making small game projects, most of which, I abandon after a few weeks. You might think I’ve wasted time, but to me, every one of those projects taught me something valuable.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="section">
+				<div class="vertical_container" style="height: 100%; align-items: center; justify-content: center;">
+					<!-- Skills -->
+					<h1 style="margin: 0px; -webkit-text-stroke: 1px var(--fg); color: transparent; font-size: 42px;">SKILLS</h1>
+					<div class="container" style="margin-bottom: 75px; opacity: 0.5; width: 90%; height: 1px; background-color: var(--fg);"></div>
+					<div class="horizontal_container">
+						<!-- Programming -->
+						<div class="horizontal_container">
+							<div class="vertical_container">
+								<div>
+									<h3 style="font-size: 22px; margin: 0px; padding: 0px;">Programming</h3>
+								</div>
+								<div class="radar-chart" id="programming-chart-container">
+									<script>
+										const programming_skills = [
+											{ name: "C", value: 0.9 },
+											{ name: "C++", value: 0.7 },
+											{ name: "LUA", value: 0.5 },
+											{ name: "UNIX", value: 0.8 },
+											{ name: "BASH", value: 0.95 },
+											{ name: "GDScript", value: 1.0 },
+											{ name: "HTML", value: 0.85 },
+											{ name: "CSS", value: 0.65 },
+											{ name: "JS", value: 0.1 },
+											{ name: "OpenGL", value: 0.4 },
+											{ name: "Yuck", value: 0.8 },
+										];
+									</script>
+									<script src="radar.js"></script>
+									<script>
+										generateRadarChart(programming_skills, "programming-chart-container");
+									</script>
+								</div>
+							</div>
+						</div>
+
+						<!-- Drawing -->
+						<div class="horizontal_container">
+							<div class="vertical_container">
+								<div>
+									<h3 style="font-size: 22px; margin: 0px; padding: 0px;">Drawing</h3>
+								</div>
+								<div class="radar-chart" id="art-chart-container">
+									<script>
+										const art_skills = [
+											{ name: "Line Control", value: 0.4 },
+											{ name: "Perspective", value: 0.35 },
+											{ name: "Shading", value: 0.8 },
+											{ name: "Blending", value: 1.0 },
+											{ name: "Rendering", value: 0.5 },
+											{ name: "Proportion", value: 0.7 },
+											{ name: "Anatomy", value: 0.45 },
+											{ name: "Volume", value: 0.65 },
+											{ name: "Concept Art", value: 0.5 },
+										];
+									</script>
+									<script src="radar.js"></script>
+									<script>
+										generateRadarChart(art_skills, "art-chart-container");
+									</script>
+								</div>
+							</div>
+						</div>
+
+						<!-- 3D -->
+						<div class="horizontal_container">
+							<div class="vertical_container">
+								<div>
+									<h3 style="font-size: 22px; margin: 0px; padding: 0px;">3D</h3>
+								</div>
+								<div class="radar-chart" id="3d-chart-container">
+									<script>
+										const _3d_skills = [
+											{ name: "Modeling", value: 1.0 },
+											{ name: "Retopology", value: 0.85 },
+											{ name: "Animation", value: 0.85 },
+											{ name: "Blend Shapes", value: 1.0 },
+											{ name: "Weight Painting", value: 1.0 },
+											{ name: "PBR", value: 1.0 },
+											{ name: "Texturing", value: 0.8 },
+											{ name: "UV", value: 1.0 },
+											{ name: "Baking", value: 1.0 },
+											{ name: "Rigging", value: 0.95 },
+											{ name: "Simulation", value: 0.2 },
+											{ name: "Sculpting", value: 0.4 },
+										];
+									</script>
+									<script src="radar.js"></script>
+									<script>
+										generateRadarChart(_3d_skills, "3d-chart-container");
+									</script>
+								</div>
+							</div>
+						</div>
+
+						<!-- Software -->
+						<div class="horizontal_container">
+							<div class="vertical_container">
+								<div>
+									<h3 style="font-size: 22px; margin: 0px; padding: 0px;">Software</h3>
+								</div>
+								<div class="radar-chart" id="software-chart-container">
+									<script>
+										const _software_skills = [
+											{ name: "Blender", value: 1.0 },
+											{ name: "C4D", value: 1.0 },
+											{ name: "MakeHuman", value: 1.0 },
+											{ name: "Krita", value: 1.0 },
+											{ name: "Gimp", value: 0.875 },
+											{ name: "Photoshop", value: 1.0 },
+											{ name: "After Effects", value: 0.85 },
+											{ name: "Audacity", value: 0.65 },
+											{ name: "Godot", value: 1.0 },
+											{ name: "Unity", value: 0.25 },
+										];
+									</script>
+									<script src="radar.js"></script>
+									<script>
+										generateRadarChart(_software_skills, "software-chart-container");
+									</script>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container" style="margin-top: 22px; opacity: 0.5; width: 90%; height: 1px; background-color: var(--fg);"></div>
+				</div>
+			</div>
+
+			<!-- Contact -->
+			<div class="section">
+				<div class="vertical_container">
+					<h1 style="margin: 0px; -webkit-text-stroke: 1px var(--fg); color: transparent; font-size: 42px;">CONTACT</h1>
+					<div class="horizontal_container">
+						<div class="vertical_container" style="align-items: center; justify-content: center;">
+							<i class="bi bi-facebook" style="font-size: 24px; font-style: normal;"></i>
+							<i class="bi bi-instagram" style="font-size: 24px; font-style: normal;"></i>
+							<i class="bi bi-envelope" style="font-size: 24px; font-style: normal;"></i>
+							<i class="bi bi-telephone" style="font-size: 24px; font-style: normal;"></i>
+						</div>
+						<div class="vertical_container" style="align-items: flex-start; justify-content: center;">
+							<label class="contact_label">Razan Ny</label>
+							<label class="contact_label">razan_ny__</label>
+							<label class="contact_label">djazejhasi@gmail.com</label>
+							<label class="contact_label">+261341091496</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			const sections = document.querySelectorAll('.section');
+			let currentSection = 0;
+			let isScrolling = false;
+			
+			function scrollToSection(index) {
+				if (index < 0 || index >= sections.length) return;
+				isScrolling = true;
+				sections[index].scrollIntoView({ behavior: 'smooth' });
+				setTimeout(() => {
+					isScrolling = false;
+					currentSection = index;
+				}, 1000);
+			}
+		</script>
+		<script>
+			new fullpage('#fullpage', {
+				autoScrolling: true,
+				navigation: true,
+				scrollHorizontally: true
+			});
+		</script>
+	</body>
+</html>
